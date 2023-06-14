@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/343319035_3591849357718565_1617467219370363577_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a4a2d7&_nc_eui2=AeEmLI2_NwaysEaYGumX6qzieocEuPmmYZN6hwS4-aZhk37M1Pf5nj_tqx36yXEwrgFT6opZ9m0Lll0q8zpwDRoN&_nc_ohc=WRixeH7IgxYAX_Bmpq_&_nc_ht=scontent.fceb6-1.fna&oh=00_AfBVIeR0kg09cRPGNrFEofd9qoqPqP8paLkyBPLaS6zu-A&oe=648DFC53'); 
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    h1 {
+      color: #e91e63;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #e91e63;
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    
+    .button {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+    
+    .popup.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #888;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ayezah Bapor</h1>
+    <p>Click the button or else ill suck u fuckin tities</p>
+    <button class="button">Click Me</button>
+  </div>
+
+  <div class="popup">
+    <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <h1>Surprise!</h1>
+      <p>PUTOT KA!</p>
+      <p>Don't worry, I still love you!</p>
+    </div>
+  </div>
+
+  <script>
+    const button = document.querySelector('.button');
+    const popup = document.querySelector('.popup');
+    const closeButton = document.querySelector('.close-button');
+
+    button.addEventListener('click', function() {
+      popup.classList.add('active');
+    });
+
+    closeButton.addEventListener('click', function() {
+      popup.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
